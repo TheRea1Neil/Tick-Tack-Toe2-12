@@ -10,16 +10,20 @@ namespace Tick_Tack_Toe2_12
     internal class TheGoods
     {
         //Print the board based on info passed to it
-        public string PutInPlace(//parameter will be the )
+        public List<object> Organize(List<object> BoardArray, int userInput, string playerSymbol) //Require the boardArray, userInput, and playersymbol
         {
-            //take list object
-            List<object> BoardArray = new List<object>
+            //safe guard to ensure user input is between 1 and 9
+            if (userInput < 1 || userInput > 9)
             {
-                1, 2, 3, 4, 5, 6, 7, 8, 9
-            };
+                Console.WriteLine("User Input is not on the tic tac toe chart, please choose number betwween 1 and 9");
+                Environment.Exit(1);
+            }
 
+            //update the board position with the player symbol
+            BoardArray[userInput - 1] = playerSymbol;
 
-            //
+            return BoardArray;
+
         }
 
         public string PrintBoard(List<object> boardArray)
