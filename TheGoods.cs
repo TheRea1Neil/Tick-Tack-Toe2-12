@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -26,7 +27,7 @@ namespace Tick_Tack_Toe2_12
 
         }
 
-        public static string PrintBoard(List<object> boardArray)
+        public void PrintBoard(List<object> boardArray)
         {
             string boardString = "";
 
@@ -41,15 +42,49 @@ namespace Tick_Tack_Toe2_12
                 }
             }
 
-            return boardString;
+            Console.WriteLine(boardString);
         }
 
-        //public string WeDaBest(BoardArray)
-       // {
+        //Returns winner symbol or if the game was a tie
+         string WeDaBest(List<object> BoardArray)
+        {
+            string winner = "";
 
+            //All possible winning combos
+            List<int[]> winningCombos = new List<int[]>
+            {
+                new int[] {0, 1, 2},//rows
+                new int[] {3, 4, 5},
+                new int[] {6, 7, 8},
+                new int[] {0, 3, 6},//columns
+                new int[] {1, 4, 7},
+                new int[] {2, 5, 8},
+                new int[] {0, 4, 8},//diagonals
+                new int[] {2, 4, 6},
+            };
 
-       //     return //winner
-        //}
+            //checks for winning combos in the BoardArray
+            foreach (var combo in winningCombos)
+            {
+                object a = BoardArray[combo[0]];
+                object b = BoardArray[combo[1]];
+                object c = BoardArray[combo[2]];
+
+                //if it's not a number and they are the same symbol declare winner
+                if (!(a is int) && a.Equals(b) && a.Equals(c))
+                {
+                    winner = a.ToString();
+                }
+            }
+
+            //if there was no winner declared, the game was a tie
+            if (winner == "")
+            {
+                winner = ("The game was a tie!");
+            }
+
+            return winner;
+        }
 
     }
 }
