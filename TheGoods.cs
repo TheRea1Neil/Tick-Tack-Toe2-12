@@ -22,5 +22,30 @@ namespace Tick_Tack_Toe2_12
             //
         }
 
+        public string PrintBoard(List<object> boardArray)
+        {
+            string boardString = "";
+
+            for (int i = 0; i < boardArray.Count; i++)
+            {
+                boardString += boardArray[i] + " ";
+
+                // After every third element, append a newline character to start a new row
+                if ((i + 1) % 3 == 0)
+                {
+                    boardString += "\n";
+                }
+            }
+
+            return boardString;
+        }
+
+        public string WeDaBest(BoardArray)
+        {
+
+
+            return //winner
+        }
+
     }
 }
