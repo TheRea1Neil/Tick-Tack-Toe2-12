@@ -46,7 +46,7 @@ namespace Tick_Tack_Toe2_12
         }
 
         //Returns winner symbol or if the game was a tie
-         string WeDaBest(List<object> BoardArray)
+         public string WeDaBest(List<object> BoardArray)
         {
             string winner = "";
 
@@ -73,7 +73,7 @@ namespace Tick_Tack_Toe2_12
                 //if it's not a number and they are the same symbol declare winner
                 if (!(a is int) && a.Equals(b) && a.Equals(c))
                 {
-                    winner = a.ToString();
+                    winner = ($" Player {a.ToString()} wins!");
                 }
             }
 
