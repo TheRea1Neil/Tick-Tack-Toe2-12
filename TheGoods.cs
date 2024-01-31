@@ -26,7 +26,7 @@ namespace Tick_Tack_Toe2_12
 
         }
 
-        public string PrintBoard(List<object> boardArray)
+        public void PrintBoard(List<object> boardArray)
         {
             string boardString = "";
 
@@ -41,15 +41,15 @@ namespace Tick_Tack_Toe2_12
                 }
             }
 
-            return boardString;
+            Console.WriteLine(boardString);
         }
 
-        public string WeDaBest(BoardArray)
-        {
+        // string WeDaBest(BoardArray)
+        //{
 
 
-            return //winner
-        }
+        //    return //winner
+        //}
 
     }
 }
