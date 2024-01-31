@@ -1,8 +1,9 @@
 ﻿using Tick_Tack_Toe2_12;
 
-internal class Program
+
+class Program
 {
-    private static void Main(string[] args)
+    static void Main(string[] args)
     {
        // using support;
 
@@ -22,16 +23,6 @@ internal class Program
         // BoardArray[4] = "X";
 
 
-        static void PrintList(List<object> list)
-        {
-            foreach (var item in list)
-            {
-                Console.Write(item + " ");
-            }
-            Console.WriteLine();
-        }
-
-
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //main sequence
 
@@ -41,6 +32,9 @@ internal class Program
         
         do
         {
+            string Board = TheGoods.PrintBoard(BoardArray);
+            Console.WriteLine(Board);
+           
             //deterimin the turn and player
             if (turn == true)
             {
@@ -68,9 +62,8 @@ internal class Program
             //update the board postion with the player
             BoardArray[userInput - 1] = player;
 
-            //test if input worked. remove this test before deployment 
-            Console.WriteLine("List after modification:");
-            PrintList(BoardArray);
+           
+           
 
 
             //invert the value of turn

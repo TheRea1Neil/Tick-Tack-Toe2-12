@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tick_Tack_Toe2_12
 {
-    internal class TheGoods
+    public class TheGoods
     {
         //Print the board based on info passed to it
         public List<object> Organize(List<object> BoardArray, int userInput, string playerSymbol) //Require the boardArray, userInput, and playersymbol
@@ -26,7 +26,7 @@ namespace Tick_Tack_Toe2_12
 
         }
 
-        public string PrintBoard(List<object> boardArray)
+        public static string PrintBoard(List<object> boardArray)
         {
             string boardString = "";
 
@@ -44,12 +44,12 @@ namespace Tick_Tack_Toe2_12
             return boardString;
         }
 
-        public string WeDaBest(BoardArray)
-        {
+       // public string WeDaBest(BoardArray)
+       // {
+            
 
-
-            return //winner
-        }
+       //     return //winner
+       // }
 
     }
 }
