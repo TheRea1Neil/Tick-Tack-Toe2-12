@@ -44,12 +44,12 @@ namespace Tick_Tack_Toe2_12
             return boardString;
         }
 
-        public string WeDaBest(BoardArray)
-        {
+        //public string WeDaBest(BoardArray)
+       // {
 
 
-            return //winner
-        }
+        //    return //winner
+        //}
 
     }
 }
