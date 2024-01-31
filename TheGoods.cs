@@ -27,7 +27,7 @@ namespace Tick_Tack_Toe2_12
 
         }
 
-        public void PrintBoard(List<object> boardArray)
+        public static void PrintBoard(List<object> boardArray)
         {
             string boardString = "";
 
@@ -46,7 +46,7 @@ namespace Tick_Tack_Toe2_12
         }
 
         //Returns winner symbol or if the game was a tie
-         string WeDaBest(List<object> BoardArray)
+         public static string WeDaBest(List<object> BoardArray)
         {
             string winner = "";
 

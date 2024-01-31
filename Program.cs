@@ -32,8 +32,8 @@ class Program
         
         do
         {
-            string Board = TheGoods.PrintBoard(BoardArray);
-            Console.WriteLine(Board);
+            TheGoods.PrintBoard(BoardArray);
+            
            
             //deterimin the turn and player
             if (turn == true)
