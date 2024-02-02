@@ -46,7 +46,7 @@ namespace Tick_Tack_Toe2_12
         }
 
         //Returns winner symbol or if the game was a tie
-         public string WeDaBest(List<object> BoardArray)
+         public static string WeDaBest(List<object> BoardArray)
         {
             string winner = "";
 
@@ -77,8 +77,11 @@ namespace Tick_Tack_Toe2_12
                 }
             }
 
+            //check if there are any ints in the list to see if the game is over/ a tie
+            bool containsIntegers = BoardArray.OfType<int>().Any();
+
             //if there was no winner declared, the game was a tie
-            if (winner == "")
+            if (containsIntegers == false)
             {
                 winner = ("The game was a tie!");
             }

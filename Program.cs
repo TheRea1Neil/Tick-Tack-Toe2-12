@@ -10,7 +10,7 @@ class Program
 
         string player = "X"; //initiate the player variable to stoe either X or O
         bool turn = true; //this alternes from ture to false each turn to change the value of player from X to O and vis versa
-        bool winner = false; // holds the state if someone has one the game or not the game will contiue as long as this is false
+        string winner = ""; // holds the state if someone has one the game or not the game will contiue as long as this is false
         int userInput = 10; //this is where the user input is saved. it is initialed to 10 bc it is a number greater than 9 and will give an error if left as is
         
         //initate the object list that holds the numbers 1-9 that will be converted to X or O as the game progresses
@@ -62,16 +62,20 @@ class Program
             //update the board postion with the player
             BoardArray[userInput - 1] = player;
 
-           
+            winner  = TheGoods.WeDaBest(BoardArray);
            
 
 
             //invert the value of turn
             turn = !turn;
 
-        } while (!winner);
-       
+        } while (winner == "");
 
+        //print board and declare winner
+        Console.WriteLine();
+        TheGoods.PrintBoard(BoardArray);
+        Console.WriteLine();
+        Console.WriteLine(winner);
 
 
 
